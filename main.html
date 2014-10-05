@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" lang="ru"/>
+		<title>Абажурный магазин</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="jquery-2.1.1.min.js"></script>
+        <script src="catalog.js"></script>
+		
+	</head>
+	<body>
+        <div id="firstPage">
+			<header style="position: relative; z-index: 2   ">
+                <a href="main.html" id="mainLink"> <img src="image/shrift.png" width="100%"> </a>
+                <nav role="navigation"  style="display: block; width: 100%;overflow: hidden;">
+                    <div id="navigationBar">
+
+                        <div class="navigationElem">
+
+                            <a href="/#">Главная</a>
+                            <div>
+                                <img src="light.png" height="47px">
+                            </div>
+                        </div>
+                        <div class="navigationElem">
+                            <a href="/#">Каталог</a>
+                            <div>
+                                <img src="light.png" height="47px">
+                            </div>
+                        </div>
+                        <div class="navigationElem">
+                            <a href="/#">Услуги</a>
+                            <div>
+                                <img src="light.png" height="47px">
+                            </div>
+                        </div>
+                        <div class="navigationElem">
+                            <a href="/#">Контакты</a>
+                            <div>
+                                <img src="light.png" height="47px">
+                            </div>
+                        </div>
+                        <div id="underline">
+
+                        </div>
+
+                    </div>
+
+
+                </nav>
+			</header>
+            <section >
+                <div style="position: absolute; z-index: 1; top:0; right:0; height:990px;">
+                    <img src="image/abajur.png" style="width:100%">
+                </div>
+                <p id="mainText">     XMLHttpRequest(XHR) loaders are limited to the same domain as the page, and make debugging harder. Certain browsers allow cross-domain XHR calls and better conventions for debugging when eval is used, but support is inconsistent across browsers.
+                    Eval-based loaders should be avoided since eval is not a JavaScript best practice and it is not allowed in some environments. There is a time and place for eval, but a module loader can do better than to use it.
+                    A server process that transforms scripts on the fly should also not be needed. Getting everyone to use the same server process or even making specs for a common format they can all emit is more overhead, more stuff to write. Front-end developers have a long established practice of being able to author plain text files and having them load in the browser without a bunch of server hardware.
+                </p>
+
+            </section>
+        </div>
+        <div id="secondPage">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB1.jpg">
+
+
+
+        </div>
+
+    <script>
+        new Catalog();
+    </script>
+	</body>
+
+</html>

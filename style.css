@@ -1,0 +1,174 @@
+
+#firstPage{
+    background: url(image/345.png);
+    background-repeat: repeat-x;
+	height:990px;
+    z-index:0;
+}
+
+
+
+body,html {
+	margin:0px;
+	padding:0px;
+}
+
+#logo {
+
+    margin-left: 25px;
+    height: 30px;
+    color: #dddadb; /* Цвет текста */
+    font-family: Arial, sans-serif; /* Рубленый шрифт */
+    font-size: 90%; /* Размер текста */
+}
+
+#navigationBar {
+
+    margin: auto;
+    height: 60px;
+
+    width: 520px;
+}
+
+.navigationElem {
+
+    height:100%;
+    float: left;
+    z-index: 4;
+    overflow:hidden;
+    position:relative;
+}
+
+.navigationElem > a {
+    display: block;
+    height:100%;
+    padding:15px;
+    font-size: 25px;
+    color: #FAFAD2;
+    text-decoration:none;
+    font-family: serif;
+    z-index: 6;
+    position:relative;
+    /*font-family: Ametist;*/
+}
+
+.navigationElem > div {
+    position: absolute;
+    height:100%;
+    z-index:5;
+    top: 0;
+    opacity: 0;
+    width:100%;
+    text-align: center;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.navigationElem:hover > div {
+    opacity: 1;
+}
+
+#mainLink {
+    display: block;
+    float:left;
+    width: 45%;
+    overflow: hidden;
+}
+
+nav {
+    position: relative;
+    bottom:0;
+    right:0;
+    width:55%
+}
+
+#underline {
+
+    height: 10px;
+    width:100%;
+    position: relative;
+    top:48px;
+    border-top:1px black solid;
+    left:-15px;
+}
+
+@font-face {
+    font-family: Ametist;
+    src: url(Pompom.ttf);
+}
+
+#mainText {
+    width: 48%;
+    margin-left: 20px;
+    margin-top: 150px;
+    font-size: 20px;
+    text-indent: 15px;
+    position: relative;
+    z-index: 2
+}
+
+#secondPage {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 800px;
+}
+
+.catalogImage {
+    width: 100%;
+}
+
+.cell {
+    float: left;
+    width: 33%;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+.panel {
+    overflow: hidden;
+    float: left;
+}
+
+.marginer {
+
+    margin: 25px 25px 0px 25px ;
+    overflow: hidden;
+}
+.roller {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    right:0
+}
+
+.arrow {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: 375px;
+    background-color: red;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    z-index: 5;
+}
+.arrow:hover {
+    opacity: 1;
+}
+
+#vizor {
+    position: relative;
+}
