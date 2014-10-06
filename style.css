@@ -1,26 +1,18 @@
 
 #firstPage{
-    background: url(image/345.png);
+    background: url(image/fon/fon_orange.png);
     background-repeat: repeat-x;
-	height:990px;
+	height:880px;
     z-index:0;
 }
 
 
 
 body,html {
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 }
 
-#logo {
-
-    margin-left: 25px;
-    height: 30px;
-    color: #dddadb; /* Цвет текста */
-    font-family: Arial, sans-serif; /* Рубленый шрифт */
-    font-size: 90%; /* Размер текста */
-}
 
 #navigationBar {
 
@@ -30,6 +22,15 @@ body,html {
     width: 520px;
 }
 
+#Kata {
+    top: 600px;
+    z-index: 0;
+}
+
+@font-face {
+    font-family: Pompadur; /* Имя шрифта */
+    src: url(Pompom.ttf); /* Путь к файлу со шрифтом */
+}
 .navigationElem {
 
     height:100%;
@@ -37,7 +38,10 @@ body,html {
     z-index: 4;
     overflow:hidden;
     position:relative;
+    ;
 }
+
+
 
 .navigationElem > a {
     display: block;
@@ -46,10 +50,10 @@ body,html {
     font-size: 25px;
     color: #FAFAD2;
     text-decoration:none;
-    font-family: serif;
+    
     z-index: 6;
     position:relative;
-    /*font-family: Ametist;*/
+    font-family:fantasy,Pompadur;
 }
 
 .navigationElem > div {
@@ -60,39 +64,42 @@ body,html {
     opacity: 0;
     width:100%;
     text-align: center;
-    -webkit-transition: opacity 0.5s ease;
-    -moz-transition: opacity 0.5s ease;
-    -ms-transition: opacity 0.5s ease;
-    -o-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 .navigationElem:hover > div {
     opacity: 1;
 }
+.lighter > img {
+    height: 47px;
+}
 
 #mainLink {
     display: block;
     float:left;
-    width: 45%;
+    width: 50%;
+    height: auto;
     overflow: hidden;
+    margin-left: 23%;
 }
 
 nav {
     position: relative;
-    bottom:0;
-    right:0;
-    width:55%
+    width:55%;
 }
 
 #underline {
 
     height: 10px;
-    width:100%;
+    width:88%;
     position: relative;
     top:48px;
     border-top:1px black solid;
-    left:-15px;
+
 }
 
 @font-face {
@@ -100,11 +107,10 @@ nav {
     src: url(Pompom.ttf);
 }
 
-#mainText {
+.mainText {
     width: 48%;
     margin-left: 20px;
-    margin-top: 150px;
-    font-size: 20px;
+    font-size: 23px;
     text-indent: 15px;
     position: relative;
     z-index: 2
@@ -114,7 +120,23 @@ nav {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 800px;
+    height: 600px;
+    background: url(image/fon/fon_brown1.png) repeat-x;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+@font-face {
+    font-family: Ametist;
+    src: url(Pompom.ttf);
+}
+.catalogText {
+
+    font-size: 40px;
+    color: #FAFAD2;
+    margin: 0;
+    font-family: Ametist  ;
+    z-index: 6  ;
 }
 
 .catalogImage {
@@ -124,7 +146,7 @@ nav {
 .cell {
     float: left;
     width: 33%;
-    height: 400px;
+    height: 300px;
     text-align: center;
     overflow: hidden;
 }
@@ -148,6 +170,7 @@ nav {
     position: absolute;
     left:0;
     right:0
+
 }
 
 .arrow {
@@ -155,8 +178,9 @@ nav {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    top: 375px;
-    background-color: red;
+    top: 37%;
+    background-color: darkred;
+
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
     -ms-transition: opacity 0.5s ease;
@@ -172,3 +196,215 @@ nav {
 #vizor {
     position: relative;
 }
+
+#servis{
+
+    background: url(image/fon/fon_grey1.png) repeat-x;
+    width: 100%;
+    height: 1460px;
+    margin:0;
+    padding-top: 40px;
+
+}
+
+#dost {
+    width: 48%;
+    margin-left: 20px;
+    margin-top: 150px;
+    font-size: 23px;
+    text-indent: 15px;
+    position: relative;
+    z-index: 2
+}
+
+#dostImg {
+
+    float: right;
+}
+
+#diz {
+
+    width: 70%;
+    margin-left: 20px;
+
+    font-size: 23px;
+
+
+
+}
+
+.dizImg {
+    width: 400px;
+    height: 400px;
+
+    padding-right: 200px;
+}
+
+.divDizTxt {
+
+    width: 500px;
+    height: 400px;
+    margin-left: 150px;
+    margin-bottom: 70px;
+    float: left;
+
+
+}
+
+.divDizTxt > h2 {
+
+    margin-left:-5px ;
+    padding-top: 150px;
+    padding-right: 150px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.divDizTxt > p {
+
+    width: 70%;
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+.divDizImg {
+    width: 500px;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-bottom: 0;
+    float: left;
+}
+
+.divDizImg > p {
+
+      width: 70%;
+      margin-left: 20px;
+
+      font-size: 23px;
+  }
+
+#zak {
+
+    width: 48%;
+    margin-left: 20px;
+    margin-top: 150px;
+    font-size: 23px;
+    text-indent: 15px;
+    position: relative;
+    z-index: 2;
+    float: right;
+}
+
+#zakImg {
+
+    float:right;
+}
+
+
+.divDizTxt > h2 {
+
+    margin-left:-5px ;
+    padding-top: 150px;
+    padding-right: 150px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+#zakzak {
+
+    width: 100%;
+    height: 400px;
+
+}
+
+.dostImg {
+    width: 500px;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    float: left;
+}
+.dostImg {
+    width: 400px;
+    height: 400px;
+    margin-top: 0;
+
+}
+
+.dostTxt {
+
+    width: 500px;
+    height: 400px;
+    margin-left: 150px;
+    /* margin-bottom: 70px; Я хуй понял, чего ты хотел этим добиться, но, по моему, это свойство все ломает */
+    float: left;
+}
+
+.dostTxt > h2 {
+
+    margin-left:-5px ;
+    padding-top: 60px;
+    padding-right: 150px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.dostTxt > p {
+
+    width: 70%;
+    margin-left: 20px;
+    font-size: 23px;
+}
+
+#kontakt {
+
+    width: 100%;
+    height: 665px;
+    background: url("image/fon/fon_green1.png");
+    margin: 0;
+}
+
+#kontakt > p {
+
+    font-size: 30px;
+
+}
+
+#underlineDown {
+
+    height: 50px;
+    width:100%;
+    position: relative;
+    top:600px;
+    border-top:1px black solid;
+}
+
+#proezdImg {
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin-top: 0;
+}
+.menu {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: 5%;
+    background-color: darkred; /* Параметры рамки */
+    float: right; /* вот хоть убей, не могу понять зачм это тут))) */
+    z-index: 4;
+    overflow:hidden;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+.menu:hover {
+    opacity: 1
+}
+

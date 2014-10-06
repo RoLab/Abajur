@@ -6,80 +6,260 @@
 		<link rel="stylesheet" type="text/css" href="style.css"/>
         <script src="jquery-2.1.1.min.js"></script>
         <script src="catalog.js"></script>
-		
+        <script src="scroller.js"></script>
 	</head>
 	<body>
+
         <div id="firstPage">
-			<header style="position: relative; z-index: 2   ">
+			<header style="position: relative; z-index: 2; height: 180px">
                 <a href="main.html" id="mainLink"> <img src="image/shrift.png" width="100%"> </a>
                 <nav role="navigation"  style="display: block; width: 100%;overflow: hidden;">
+                    <div id="glav"></div>
                     <div id="navigationBar">
 
                         <div class="navigationElem">
 
-                            <a href="/#">Главная</a>
-                            <div>
-                                <img src="light.png" height="47px">
+                            <a href="#firstPage">Главная</a>
+                            <div class="lighter">
+                                <img src="image/svet/light.png">
                             </div>
                         </div>
                         <div class="navigationElem">
-                            <a href="/#">Каталог</a>
-                            <div>
-                                <img src="light.png" height="47px">
+                            <a href="#secondPage">Каталог</a>
+                            <div class="lighter">
+                                <img src="image/svet/light.png">
                             </div>
                         </div>
                         <div class="navigationElem">
-                            <a href="/#">Услуги</a>
-                            <div>
-                                <img src="light.png" height="47px">
+                            <a href="#servis">Услуги</a>
+                            <div class="lighter">
+                                <img src="image/svet/light.png">
                             </div>
                         </div>
                         <div class="navigationElem">
-                            <a href="/#">Контакты</a>
-                            <div>
-                                <img src="light.png" height="47px">
+                            <a href="#kontakt">Контакты</a>
+                            <div class="lighter">
+                                <img src="image/svet/light.png">
                             </div>
                         </div>
+
+                            <div id="Glav"> <a  name="glav" > </a></div>
+
                         <div id="underline">
 
                         </div>
+
 
                     </div>
 
 
                 </nav>
 			</header>
+
             <section >
-                <div style="position: absolute; z-index: 1; top:0; right:0; height:990px;">
-                    <img src="image/abajur.png" style="width:100%">
+                <div style="position: absolute; z-index: 1; top:0; right:0; height:990px; width: 100%">
+
+                    <img src="image/Lampa/lampa3.png" style="width:100% ; height: 89%;">
+
                 </div>
-                <p id="mainText">     XMLHttpRequest(XHR) loaders are limited to the same domain as the page, and make debugging harder. Certain browsers allow cross-domain XHR calls and better conventions for debugging when eval is used, but support is inconsistent across browsers.
-                    Eval-based loaders should be avoided since eval is not a JavaScript best practice and it is not allowed in some environments. There is a time and place for eval, but a module loader can do better than to use it.
-                    A server process that transforms scripts on the fly should also not be needed. Getting everyone to use the same server process or even making specs for a common format they can all emit is more overhead, more stuff to write. Front-end developers have a long established practice of being able to author plain text files and having them load in the browser without a bunch of server hardware.
+
+                <p class="mainText" style="margin-top: 150px">     Абажуры давно не используются только по своему прямому назначению - защите
+                    глаз от яркого света. Они приобрели весомое место в организации и устройстве интерьера.
+
+                   <p class="mainText"> Правильно подобранные абажуры способны оживить любое помещение.</p>
+
+                   <p class="mainText"> С их помощью Вы сможете проявить свой неординарный вкус, почувствовав себя настоящим дизайнером.</p>
+
+                   <p class="mainText"> В нашем магазине мы предлагаем Вам широкий выбор абажуров, с помощью которых Вы сможете освежить и
+                    придать «второе дыхание» вашим лампам и бра. Разных цветов и форм, выполненные из различных материалов,
+                    они способны украсить любое помещение.</p>
                 </p>
-
             </section>
+
         </div>
+
+                        <!-- -------------------------------------------  Галерея ----------------------------------------- -->
+
         <div id="secondPage">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB4.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB4.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB4.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB5.jpg">
             <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB3.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB4.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB1.jpg">
+            <img src="image/katalog/AB5.jpg">
+            <img src="image/katalog/AB2.jpg">
+            <img src="image/katalog/AB2.jpg">
+        </div>
 
+        <script>
+        new Catalog();
+        </script>
+
+        <!-- ------------------------------------------Список услуг--------------------------------------- -->
+
+        <div id="servis">
+
+            <div class="divDizTxt">
+
+                <h2> Услуги Профессиональных Дизайнеров </h2>
+
+                <p >В нашем магазине Вы можете воспользоваться услугами профессионального
+                     дизайнера, который поможет подобрать Вам абажур, вписывающийся в интерьеp.</p>
+
+            </div>
+
+            <div class="divDizImg">
+
+                <img class="dizImg" src="image/service/kons.jpg" >
+
+            </div>
+
+            <div id="zakzak">
+
+                 <div class="divDizTxt">
+
+                     <img class="dizImg" style="margin-top: 75px" src="image/service/unik.jpg">
+
+                 </div>
+
+
+                 <div class="divDizImg" style="margin-top: 140px;">
+
+                        <h2>Под Ваш Заказ</h2>
+
+                        <p>Вы можете заказать в нашем магазине абажур по собственному эскизу или же обратиться к
+                        дизайнеру, чтобы он помог сделать абажур в соответствии с Вашими предпочтениями</p>
+
+                 </div>
+            </div>
+
+
+            <div class="dostTxt" >
+
+                <h2 >Доставка</h2>
+
+                <p>Мы предоставляем Вам услугу доставки товара по Москве и Московской области. Стоимость доставки: бесплатно. Срок доставки: на следующий рабочий день после оформления заказа. Дни доставки: понедельник-суббота.</p>
+
+            </div>
+
+            <div class="dostImg">
+            <img class="dostImg" src="image/katalog/AB3.jpg">
+
+            </div>
+         </div>
+
+        <!-- ------------------------------------------------- Контакты ------------------------------------------------ -->
+
+    <div id="kontakt">
+
+        <div class="dostTxt">
+
+             <h1 style="margin-top: 0; padding-top: 120px"> Наши контакты :</h1>
+             <p>Телефон : 8-968-760-56-21</p>
+             <p> E-mail : Rovolkov@mail.ru</p>
+             <p>Адрес : г.Москва ул.Арбатская, 1</p>
+
+        </div>
+        <div id="proezdImg" style="padding-top: 100px">
+             <p style="font-size: 20px; margin-bottom: 3px; margin-top: 2px; ;text-indent: 10px ">Схема проезда от станции метро Арбатская</p>
+             <img id="proezdImg" src="image/adres/karta.jpg">
 
 
         </div>
+        <div id="underlineDown">
+            <a style="float: left;margin:0;">© RoLab 2014 tgnf  </a>
+            <p>version 0.2.0</p>
+            <div id="upwardButton" class="menu"></div>
+            <div class="text"></div>
+        </div>
 
-    <script>
-        new Catalog();
-    </script>
+
+
+    </div>
+        <script>
+            new Scroller();
+        </script>
 	</body>
 
 </html>

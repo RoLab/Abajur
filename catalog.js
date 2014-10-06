@@ -33,6 +33,10 @@ var Catalog = function () {
 
 Catalog.prototype.show = function (index) {
     var that = this;
+    if (that.forbidden) {
+        return;
+    }
+    that.forbidden = true;
     var roller = $('<div class="roller">');
     roller.width(that.layout.width() * 2);
 
@@ -66,6 +70,7 @@ Catalog.prototype.show = function (index) {
         that.layout.append(that.panels[index].wrapper);
         that.displayedPanel = that.panels[index].wrapper;
         roller.remove();
+        that.forbidden = false;
     }, 600);
 
     that.displayed = index;
