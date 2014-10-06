@@ -72,7 +72,7 @@ body,html {
 }
 
 .navigationElem:hover > div {
-    opacity: 1;
+    opacity: 1 !important;
 }
 .lighter > img {
     height: 47px;
