@@ -47,7 +47,7 @@ var Scroller = function() {
 
 Scroller.prototype.scroll = function(href) {
 
-    $('body').animate({
+    $('html, body').animate({
         scrollTop: href ? $(href.slice(href.lastIndexOf("#"))).offset().top : 0
     }, 500
     );
