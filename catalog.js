@@ -4,6 +4,9 @@ var Catalog = function () {
     that.wrapper = $("#secondPage");
     that.layout = $('<div id="vizor">');
     that.wrapper.append(that.layout);
+
+    that.viewer = new Viewer();
+
     that.imagesCatalog = [];
     $("img", that.wrapper.get(0)).each(function (index, elem) {
         elem.className = "catalogImage";
@@ -15,6 +18,7 @@ var Catalog = function () {
     var count = that.count = Math.ceil(that.imagesCatalog.length / 6);
     for (var i = 0; i < count; i++) {
         that.panels.push(new Panel());
+        that.panels[that.panels.length - 1].viewer = that.viewer;
     }
     var k = 0;
     for (i = 0; i < that.imagesCatalog.length; i++) {
@@ -125,6 +129,90 @@ var Panel = function () {
 Panel.prototype.append = function (elem) {
     var that = this;
     that.cells[that.images].append(elem);
+    elem.onclick = (function(elem) {
+        return function() {
+            that.viewer.show(elem);
+        }
+    })(elem);
     that.images++;
 
+};
+
+var Viewer = function() {
+    var that = this;
+    var wrapper = that.wrapper = $('<div class="viewer">');
+
+    var glass = that.glass = $('<div class="glass">');
+    $('body').prepend(wrapper).prepend(glass);
+    glass.click(function() {
+        that.hide();
+    });
+
+    var leftLayout = that.leftLayout = $('<div class="layout">');
+    var rightLayout = that.rightLayout = $('<div class="layout">');
+
+    wrapper.append(leftLayout);
+    wrapper.append(rightLayout);
+
+    var placer = that.placer = $('<div class="placer">');
+    leftLayout.append(placer);
+
+    var name = that.name = $('<h1 class="viewName">');
+    var id = that.art = $('<h1 class="viewId">');
+    var description = that.description = $('<p class = viewDescription>');
+    var price = that.price = $('<h1 class="viewPrice">');
+
+    rightLayout.append(id);
+    rightLayout.append(name);
+    rightLayout.append(description);
+    rightLayout.append(price);
+    rightLayout.css("text-align", "left");
+};
+
+Viewer.prototype.show = function(elem) {
+    var that = this;
+
+    that.wrapper.css({
+        "top": "50px",
+        "height": "700px",
+        opacity: 1
+    });
+    that.glass.css({
+        "display": "block"
+    });
+    setTimeout(function() {
+        that.glass.css({
+            "opacity": 0.5
+        });
+    } ,1);
+    that.placer.css("display", "table-cell");
+
+    var img = that.img = $('<img src="'+elem.src+'" class="fullSizeImage">');
+
+    var jElem = $(elem);
+    that.placer.append(img);
+    that.art.html("Артикул: " + jElem.data("id"));
+    that.name.html(jElem.data("name"));
+    that.description.html(jElem.data("description"));
+    that.price.html("Цена: " +jElem.data("price") + " р.");
+};
+
+Viewer.prototype.hide = function() {
+    var that = this;
+
+    that.wrapper.css({
+        height: 0,
+        top: "-100px",
+        opacity: 0
+    });
+    that.glass.css("opacity", 0);
+    setTimeout(function() {
+        that.glass.css("display", "none");
+        that.placer.css("display", "none");
+        that.img.remove();
+        that.art.empty();
+        that.name.empty();
+        that.description.empty();
+        that.price.empty();
+    },300);
 };

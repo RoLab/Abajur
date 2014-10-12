@@ -408,3 +408,91 @@ nav {
     opacity: 1
 }
 
+.viewer {
+    width: 80%;
+    height: 0;
+    background-color: #888888;
+    position: fixed;
+    top: -100px;
+    left: 10%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 11;
+}
+
+.glass {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+
+.layout {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.fullSizeImage {
+    width: 100%;
+}
+
+.placer {
+    width: 500px;
+    overflow: hidden;
+    height: 600px;
+    position:relative;
+    top:50px;
+    left: 50px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    display: none
+}
+
+.blurable {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    filter: blur(0px);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.viewId {
+    text-align: center;
+    margin-top: 70px;
+    color: white;
+}
+
+.viewName {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    text-decoration: underline;
+}
+
+.viewDescription {
+    color: white;
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+.viewPrice {
+    position: absolute;
+    color: white;
+    text-align: right;
+    bottom: 20px;
+    right: 10px;
+}
