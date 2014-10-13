@@ -148,21 +148,43 @@ var Viewer = function() {
         that.hide();
     });
 
+    var width = that.width = glass.width();
+    var height = that.height = glass.height();
+
+    wrapper.css({
+        "width": width - width/10 +"px",
+        "left": width/20 +"px"
+    });
+
     var leftLayout = that.leftLayout = $('<div class="layout">');
     var rightLayout = that.rightLayout = $('<div class="layout">');
 
     wrapper.append(leftLayout);
     wrapper.append(rightLayout);
 
+    leftLayout.css({
+        width: height - height/5 + "px",
+        height: height - height/5 + "px",
+        top: height/20 + "px",
+        left: height/20 + "px"
+    });
+
+    rightLayout.css({
+        width: width - width/10 - (height - height/5) - height/10 + "px",
+        height: height - height/5 + "px",
+        top: height/20 + "px",
+        left: height/20 + "px"
+    });
+
     var placer = that.placer = $('<div class="placer">');
+    var helper = $('<div class="helper">');
     leftLayout.append(placer);
+    leftLayout.append(helper);
 
     var name = that.name = $('<h1 class="viewName">');
-    var id = that.art = $('<h1 class="viewId">');
     var description = that.description = $('<p class = viewDescription>');
     var price = that.price = $('<h1 class="viewPrice">');
 
-    rightLayout.append(id);
     rightLayout.append(name);
     rightLayout.append(description);
     rightLayout.append(price);
@@ -173,25 +195,23 @@ Viewer.prototype.show = function(elem) {
     var that = this;
 
     that.wrapper.css({
-        "top": "50px",
-        "height": "700px",
+        "top": that.height/20 + "px",
+        "height": that.height - that.height/10 + "px",
         opacity: 1
     });
     that.glass.css({
-        "display": "block"
+        "z-index": 10
     });
     setTimeout(function() {
         that.glass.css({
             "opacity": 0.5
         });
     } ,1);
-    that.placer.css("display", "table-cell");
 
     var img = that.img = $('<img src="'+elem.src+'" class="fullSizeImage">');
 
     var jElem = $(elem);
     that.placer.append(img);
-    that.art.html("Артикул: " + jElem.data("id"));
     that.name.html(jElem.data("name"));
     that.description.html(jElem.data("description"));
     that.price.html("Цена: " +jElem.data("price") + " р.");
@@ -202,15 +222,14 @@ Viewer.prototype.hide = function() {
 
     that.wrapper.css({
         height: 0,
-        top: "-100px",
+        top: "-500px",
         opacity: 0
     });
     that.glass.css("opacity", 0);
     setTimeout(function() {
-        that.glass.css("display", "none");
-        that.placer.css("display", "none");
+        that.glass.css("z-index", -1);
+        //that.placer.css("display", "none");
         that.img.remove();
-        that.art.empty();
         that.name.empty();
         that.description.empty();
         that.price.empty();
