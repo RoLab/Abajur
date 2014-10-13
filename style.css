@@ -412,13 +412,14 @@ nav {
     height: 0;
     background-color: #888888;
     position: fixed;
-    top: -500px;
+    top: -100px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     z-index: 11;
+    overflow: hidden;
 }
 
 .glass {
@@ -440,6 +441,7 @@ nav {
     float: left;
     position: relative;
     overflow: hidden;
+    display: none;
 }
 
 .fullSizeImage {
@@ -461,42 +463,25 @@ nav {
     display: inline-block;
 }
 
-.blurable {
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -ms-filter: blur(0px);
-    -o-filter: blur(0px);
-    filter: blur(0px);
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.viewId {
-    text-align: center;
-    margin-top: 70px;
-    color: white;
-}
-
 .viewName {
-    text-align: center;
-    margin-top: 50px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
     color: white;
     text-decoration: underline;
+    position: relative;
 }
 
 .viewDescription {
     color: white;
     font-size: 28px;
-    margin-top: 40px;
+    margin: 0;
+    position: relative;
 }
 
 .viewPrice {
     position: absolute;
     color: white;
-    text-align: right;
-    bottom: 20px;
-    right: 10px;
+    bottom: 0;
+    right: 0;
 }

@@ -152,8 +152,8 @@ var Viewer = function() {
     var height = that.height = glass.height();
 
     wrapper.css({
-        "width": width - width/10 +"px",
-        "left": width/20 +"px"
+        "width": width - width/5 +"px",
+        "left": width/10 +"px"
     });
 
     var leftLayout = that.leftLayout = $('<div class="layout">');
@@ -170,10 +170,10 @@ var Viewer = function() {
     });
 
     rightLayout.css({
-        width: width - width/10 - (height - height/5) - height/10 + "px",
+        width: width - width/5 - (height - height/5) - height/7.5 + "px",
         height: height - height/5 + "px",
         top: height/20 + "px",
-        left: height/20 + "px"
+        left: height/10 + "px"
     });
 
     var placer = that.placer = $('<div class="placer">');
@@ -188,7 +188,15 @@ var Viewer = function() {
     rightLayout.append(name);
     rightLayout.append(description);
     rightLayout.append(price);
-    rightLayout.css("text-align", "left");
+
+    name.css({
+        left: height/50 + 'px',
+        width: (width - width/5 - (height - height/5) - height/7.5) - height/20 - height/50 + 'px'
+    });
+    description.css({
+        top: height/20 + 'px',
+        width: (width - width/5 - (height - height/5) - height/7.5) - height/20 + 'px'
+    });
 };
 
 Viewer.prototype.show = function(elem) {
@@ -202,6 +210,8 @@ Viewer.prototype.show = function(elem) {
     that.glass.css({
         "z-index": 10
     });
+    that.leftLayout.css("display", "block");
+    that.rightLayout.css("display", "block");
     setTimeout(function() {
         that.glass.css({
             "opacity": 0.5
@@ -222,7 +232,7 @@ Viewer.prototype.hide = function() {
 
     that.wrapper.css({
         height: 0,
-        top: "-500px",
+        top: "-100px",
         opacity: 0
     });
     that.glass.css("opacity", 0);
@@ -233,5 +243,7 @@ Viewer.prototype.hide = function() {
         that.name.empty();
         that.description.empty();
         that.price.empty();
+        that.leftLayout.css("display", "none");
+        that.rightLayout.css("display", "none");
     },300);
 };
