@@ -201,6 +201,7 @@ var Viewer = function() {
 
 Viewer.prototype.show = function(elem) {
     var that = this;
+    scrollBlock = true;
 
     that.wrapper.css({
         "top": that.height/20 + "px",
@@ -230,6 +231,7 @@ Viewer.prototype.show = function(elem) {
 Viewer.prototype.hide = function() {
     var that = this;
 
+
     that.wrapper.css({
         height: 0,
         top: "-100px",
@@ -245,5 +247,6 @@ Viewer.prototype.hide = function() {
         that.price.empty();
         that.leftLayout.css("display", "none");
         that.rightLayout.css("display", "none");
+        scrollBlock = false;
     },300);
 };

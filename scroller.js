@@ -27,6 +27,10 @@ var Scroller = function() {
     elems.push($('#kontakt'));
 
     $(window).on('scroll', function(e) {
+        if (scrollBlock) {
+            e.preventDefault();
+            return false;
+        }
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled > 117) {
             scrollbar.css("position", "fixed");
@@ -41,8 +45,24 @@ var Scroller = function() {
                 break;
             }
         }
-
     });
+
+    document.onmousewheel = document.onwheel = function() {
+        if (scrollBlock) {
+            return false;
+        }
+    };
+    document.addEventListener ("MozMousePixelScroll", function() {
+        if (scrollBlock) {
+            return false
+        }
+    }, false);
+    document.onkeydown = function(e) {
+        if (scrollBlock) {
+            if (e.keyCode >= 33 && e.keyCode <= 40) return false;
+        }
+    }
+
 };
 
 Scroller.prototype.scroll = function(href) {
