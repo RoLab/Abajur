@@ -477,6 +477,7 @@ nav {
     font-size: 28px;
     margin: 0;
     position: relative;
+    text-indent: 20px;
 }
 
 .viewPrice {
@@ -484,4 +485,5 @@ nav {
     color: white;
     bottom: 0;
     right: 0;
+    background-color: #44B200;
 }

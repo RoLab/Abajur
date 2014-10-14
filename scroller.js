@@ -31,8 +31,9 @@ var Scroller = function() {
             e.preventDefault();
             return false;
         }
+        var mainHref = $('#mainLink');
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrolled > 117) {
+        if (scrolled > mainHref.height()) {
             scrollbar.css("position", "fixed");
         } else {
             scrollbar.css("position", "relative")

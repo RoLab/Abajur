@@ -190,7 +190,6 @@ var Viewer = function() {
     rightLayout.append(price);
 
     name.css({
-        left: height/50 + 'px',
         width: (width - width/5 - (height - height/5) - height/7.5) - height/20 - height/50 + 'px'
     });
     description.css({
