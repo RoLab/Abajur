@@ -16,7 +16,8 @@ var Scroller = function() {
             }
         })(elem.href);
     });
-    $('#upwardButton').get(0).onclick = function() {
+    var upwardButton = $('#upwardButton');
+    upwardButton.get(0).onclick = function() {
         return that.scroll();
     };
     var lights = $('.lighter');
@@ -35,8 +36,10 @@ var Scroller = function() {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if (scrolled > mainHref.height()) {
             scrollbar.css("position", "fixed");
+            upwardButton.css("display", "block");
         } else {
-            scrollbar.css("position", "relative")
+            scrollbar.css("position", "relative");
+            upwardButton.css("display", "none");
         }
 
         lights.css("opacity", 0);

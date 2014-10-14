@@ -179,14 +179,14 @@ nav {
     width: 100px;
     border-radius: 50%;
     top: 37%;
-    background-color: darkred;
-
+    background-color: transparent;
+    background-size: 100% 100%;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
     -ms-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
-    opacity: 0;
+    opacity: 0.2;
     z-index: 5;
 }
 .arrow:hover {
@@ -364,16 +364,18 @@ nav {
     width: 100px;
     border-radius: 50%;
     top: 5%;
-    background-color: darkred; /* Параметры рамки */
-    float: right; /* вот хоть убей, не могу понять зачм это тут))) */
+    background-color: transparent;
     z-index: 4;
+    background-size: 100% 100%;
+    background-image: url(image/up.png);
     overflow:hidden;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
     -ms-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
-    opacity: 0;
+    opacity: 0.2;
+    display: none;
 }
 .menu:hover {
     opacity: 1
@@ -381,7 +383,8 @@ nav {
 
 .viewer {
     height: 0;
-    background-color: #888888;
+    background: url(image/window.png);
+    background-size: 100% 100%;
     position: fixed;
     top: -100px;
     -webkit-transition: all 0.3s ease-in-out;

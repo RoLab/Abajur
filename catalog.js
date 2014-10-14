@@ -96,8 +96,8 @@ Catalog.prototype.show = function (index) {
 Catalog.prototype.initArrows = function() {
     var that = this;
     that.arrows = {};
-    var left = that.arrows.left = $('<div class="arrow" style="left:50px">');
-    var right = that.arrows.right = $('<div class="arrow" style="right:50px">');
+    var left = that.arrows.left = $('<div class="arrow" style="left:50px; background-image: url(image/left.png)">');
+    var right = that.arrows.right = $('<div class="arrow" style="right:50px; background-image: url(image/right.png)">');
     that.wrapper.append(left);
     that.wrapper.append(right);
     left.on("click", function() {
